@@ -1,8 +1,9 @@
 package com.example.booking.services;
 
-import com.example.booking.dao.ImageDao;
+import com.example.booking.models.dto.ConfRoomDto;
 import com.example.booking.models.dto.ImageDto;
-import com.example.booking.models.entities.Image;
+
+import java.util.List;
 
 public interface ImageService {
 
@@ -13,4 +14,6 @@ public interface ImageService {
     ImageDto update(ImageDto imageDto);
 
     ImageDto delete(ImageDto imageDto);
+
+    List<ImageDto> findAllByConfRoom(ConfRoomDto confRoomDto);
 }

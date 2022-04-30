@@ -26,7 +26,7 @@ public class SwaggerConfig {
 
     private ApiInfo metaData(){
         return new ApiInfoBuilder()
-                .title("Сервис создание и проверки тестов")
+                .title("Booking rooms")
                 .description("d7h2p2bkff0ufb")
                 .version("1.0")
                 .contact(new Contact("Abdulmajit", "www.megacom.kg", "abdulmajit.kubatbekov@gmail.com"))

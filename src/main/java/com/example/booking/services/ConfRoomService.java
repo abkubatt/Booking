@@ -2,6 +2,8 @@ package com.example.booking.services;
 
 import com.example.booking.models.dto.ConfRoomDto;
 
+import java.util.List;
+
 public interface ConfRoomService {
 
     ConfRoomDto save(ConfRoomDto confRoomDto);
@@ -11,4 +13,6 @@ public interface ConfRoomService {
     ConfRoomDto update(ConfRoomDto confRoomDto);
 
     ConfRoomDto delete(ConfRoomDto confRoomDto);
+
+     List<ConfRoomDto> findAllByActive();
 }
