@@ -6,9 +6,10 @@ import com.example.booking.models.dto.DepartmentDto;
 import com.example.booking.models.entities.Department;
 import com.example.booking.services.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class DepartmentServiceImpl implements DepartmentService {
 
     @Autowired

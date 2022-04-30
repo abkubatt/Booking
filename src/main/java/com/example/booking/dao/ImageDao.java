@@ -5,9 +5,10 @@ import com.example.booking.models.dto.ConfRoomDto;
 import com.example.booking.models.entities.Image;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+@Repository
 public interface ImageDao extends JpaRepository<Image, Long > {
 
     @Query(value = "select * from tb_confroom tc where tc.confroom_id ?1 and tc.is_active = true", nativeQuery = true)

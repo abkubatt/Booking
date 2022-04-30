@@ -6,9 +6,10 @@ import com.example.booking.models.dto.ConfRoomDto;
 import com.example.booking.models.entities.ConfRoom;
 import com.example.booking.services.ConfRoomService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class ConfRoomServiceImpl implements ConfRoomService {
     @Autowired
     private ConfRoomDao confRoomDao;

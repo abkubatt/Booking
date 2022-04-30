@@ -5,9 +5,10 @@ import com.example.booking.models.dto.ConfRoomDto;
 import com.example.booking.models.entities.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+@Repository
 public interface BookDao extends JpaRepository<Book, Long> {
 
     @Query(value = "select * from tb_book tb where tb.confroom_id = ?1 and tb.is_active = true", nativeQuery = true)
