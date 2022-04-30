@@ -15,4 +15,6 @@ public interface ConfRoomService {
     ConfRoomDto delete(ConfRoomDto confRoomDto);
 
      List<ConfRoomDto> findAllByActive();
+
+     List<ConfRoomDto> filer(int amoundPerson, boolean projector, boolean conditioner, boolean board);
 }

@@ -1,9 +1,12 @@
 package com.example.booking.controllers;
 
 import com.example.booking.models.dto.ConfRoomDto;
+import com.example.booking.models.dto.DepartmentDto;
 import com.example.booking.services.ConfRoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/api/v1/confroom")
@@ -18,5 +21,9 @@ public class ConfRoomController {
     @GetMapping("/findById")
     public ConfRoomDto findById(@RequestParam Long id){
         return confRoomService.findById(id);
+    }
+    @PostMapping("findAllByActive")
+    public List<ConfRoomDto> findAllByActive(){
+        return confRoomService.findAllByActive();
     }
 }

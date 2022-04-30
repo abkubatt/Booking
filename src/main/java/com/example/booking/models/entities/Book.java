@@ -3,10 +3,14 @@ package com.example.booking.models.entities;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.sql.Date;
 import java.sql.Time;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 @Data
 @Entity
@@ -19,9 +23,9 @@ public class Book {
     @ManyToOne
     @JoinColumn(name = "confroom_id")
     ConfRoom confRoom;
-    Time StartTime;
-    Time EndTime;
-    Date date;
+    LocalTime startTime;
+    LocalTime endTime;
+    LocalDate date;
     String FIO;
     @ManyToOne
     @JoinColumn(name = "department_id")

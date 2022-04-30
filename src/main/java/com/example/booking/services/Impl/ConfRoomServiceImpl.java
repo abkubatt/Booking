@@ -5,6 +5,7 @@ import com.example.booking.mappers.ConfRoomMapper;
 import com.example.booking.models.dto.ConfRoomDto;
 import com.example.booking.models.entities.ConfRoom;
 import com.example.booking.services.ConfRoomService;
+import lombok.Builder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -42,5 +43,10 @@ public class ConfRoomServiceImpl implements ConfRoomService {
     public List<ConfRoomDto> findAllByActive() {
         List<ConfRoom> confRooms = confRoomDao.findAllByActiveTrue();
         return confRoomMapper.confRoomListToConfRoomDtoList(confRooms);
+    }
+
+    @Override
+    public List<ConfRoomDto> filer(int amoundPerso, boolean projector, boolean conditioner, boolean board) {
+        return null;
     }
 }

@@ -2,6 +2,7 @@ package com.example.booking.controllers;
 
 import com.example.booking.models.dto.BookDto;
 import com.example.booking.models.dto.ConfRoomDto;
+import com.example.booking.models.json.BookSaveResponse;
 import com.example.booking.services.BookService;
 import com.example.booking.services.ConfRoomService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ public class BookController {
     private ConfRoomService confRoomService;
 
     @PostMapping("/save")
-    public BookDto save(@RequestBody BookDto bookDto){
+    public BookSaveResponse save(@RequestBody BookDto bookDto){
         return bookService.save(bookDto);
     }
 
